@@ -4,7 +4,7 @@ session_start();
 			<div class="row">
 
 				<div class="col-md-10 col-sm-12" style='color:yellow;'>
-					<a href="#" class="btn btn-info" onclick="exportarServicioCliente()">Descargar pdf</a>Listado de todos los clientes quie hicieron un servicio registrados hasta la ultima fecha :<p>
+					<a href="#" class="btn btn-info" onclick="exportarPDFServicioCliente()">Descargar pdf</a>Listado de todos los clientes quie hicieron un servicio registrados hasta la ultima fecha :<p>
                 </div>
 
                 <div class="col-md-4 col-sm-6" style='color:yellow;'>

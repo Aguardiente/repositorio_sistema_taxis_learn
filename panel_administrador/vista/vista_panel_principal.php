@@ -49,7 +49,7 @@ error_reporting(0);
     </script>
 
   <link rel="stylesheet" href="../dist/css/fuentes.css" type="text/css" />
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
 <script src="../control/controlador_menu.js"></script>
 <script type='text/javascript' src='../control/controlador_administrador.js'></script>
 <script type='text/javascript' src='../control/controladores_cliente.js'></script>
