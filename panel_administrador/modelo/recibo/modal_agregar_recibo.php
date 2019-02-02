@@ -42,7 +42,7 @@ error_reporting(0);
                           $c=0;
                         while($c<sizeof($infoTablasAdmin)){
 
-                          echo "<option value='".$infoTablasAdmin[$c][2]." ".$infoTablasAdmin[$c][3]."' >".$infoTablasAdmin[$c][2]." ".$infoTablasAdmin[$c][3]."</option>";
+                          echo "<option value='".$infoTablasAdmin[$c][0]."' >".$infoTablasAdmin[$c][2]." ".$infoTablasAdmin[$c][3]."</option>";
 
                           $c++;
                         }
@@ -88,7 +88,7 @@ error_reporting(0);
                           $c=0;
                         while($c<sizeof($infoTablasAdmin)){
 
-                          echo "<option value='".$infoTablasAdmin[$c][1]."' >".$infoTablasAdmin[$c][1]."</option>";
+                          echo "<option value='".$infoTablasAdmin[$c][0]."' >".$infoTablasAdmin[$c][1]."</option>";
 
                           $c++;
                         }
@@ -123,7 +123,7 @@ error_reporting(0);
                           $c=0;
                         while($c<sizeof($infoTablasAdmin)){
 
-                          echo "<option value='".$infoTablasAdmin[$c][1]."' >".$infoTablasAdmin[$c][1]."</option>";
+                          echo "<option value='".$infoTablasAdmin[$c][0]."' >".$infoTablasAdmin[$c][1]."</option>";
 
                           $c++;
                         }

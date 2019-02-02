@@ -12,5 +12,8 @@
   include("../../conector/conectadorSQL.php");
   date_default_timezone_set('America/Caracas');
   $sql=mysqli_query($conectador,"INSERT INTO `Factura` (`ID_Factura`,`servicio` ,`chofer` ,`cliente` ,`descripcion` ,`tipo` ,`total` ,`pago` ,`saldo` ,`nit_cliente` ,`fecha_emision`, `hora` ) VALUES (NULL, '$servicio' , '$chofer' , '$cliente' , '$descripcion' , '$tipo' , '$total' , '$pago' , '$saldo' , '$nit_cliente' , '".date('d/m/y')."' , '".date('g:ia')."' )"); 
-  echo "<script>verRecibos();</script>";
+
+ echo "INSERT INTO `Factura` (`ID_Factura`,`servicio` ,`chofer` ,`cliente` ,`descripcion` ,`tipo` ,`total` ,`pago` ,`saldo` ,`nit_cliente` ,`fecha_emision`, `hora` ) VALUES (NULL, '$servicio' , '$chofer' , '$cliente' , '$descripcion' , '$tipo' , '$total' , '$pago' , '$saldo' , '$nit_cliente' , '".date('d/m/y')."' , '".date('g:ia')."' )";
+ 
+  //echo "<script>verRecibos();</script>";
 ?>
