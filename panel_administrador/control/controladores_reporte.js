@@ -62,7 +62,7 @@ var pdf = new jsPDF('p', 'pt', 'letter');
             top: 80,
             bottom: 60,
             left: 40,
-            width: 522
+            width: 1000
         };
 
         pdf.fromHTML(
