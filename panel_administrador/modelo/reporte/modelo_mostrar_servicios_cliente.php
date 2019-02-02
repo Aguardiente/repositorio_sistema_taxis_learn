@@ -1,27 +1,4 @@
-<?php 
-session_start();
-?>
-			<div class="row">
-
-				<div class="col-md-10 col-sm-12" style='color:yellow;'>
-					<a href="#" class="btn btn-info" onclick="exportarServicioCliente()">Descargar pdf</a>Listado de todos los clientes quie hicieron un servicio registrados hasta la ultima fecha :<p>
-                </div>
-
-                <div class="col-md-4 col-sm-6" style='color:yellow;'>
-					Filtrar :<p>
-					<div class="input-daterange input-group fj-date">
-				    	<input type="text" class="input-sm form-control" value="Fecha Inicial" id="fechaInicial" readonly  />
-				    	<span class="input-group-addon">hasta</span><input type="text" class="input-sm form-control" value="Fecha Final" id="fechaFinal" readonly  />
-				    	
-					</div>
-					
-                </div>
-                <div class="col-md-4 col-sm-6" style='color:yellow;'>
-                	<br>
-                	<a href="#" class="btn btn-info btn-sm" onclick="buscarServicioCliente()">Buscar</a>
-                	<a href="#" class="btn btn-info btn-sm" onclick="reestablecerServicioCliente()">Reestablecer</a>
-				</div>
-	         </div><div id="contReporte"><p>
+<p>
 
 							<?php
 								$infoTablasAdmin="";
@@ -88,4 +65,3 @@ session_start();
 		   maxViewMode: 1
 	});
 	</script>
-   </div>

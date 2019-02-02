@@ -45,7 +45,7 @@ session_start();
 												$c=0;
 												while($c<sizeof($infoTablasAdmin)){
 
-														echo "<tr><td>".$infoTablasAdmin[$c][0]."</td><td>".$infoTablasAdmin[$c][1]."</td><td>".$infoTablasAdmin[$c][12]." ".$infoTablasAdmin[$c][13]."</td><td>".$infoTablasAdmin[$c][22].$infoTablasAdmin[$c][23]."</td><td>".$infoTablasAdmin[$c][4]."</td><td>".$infoTablasAdmin[$c][31]."</td><td>".$infoTablasAdmin[$c][6]."</td><td>".$infoTablasAdmin[$c][7]."</td><td>".$infoTablasAdmin[$c][8]."</td><td>".$infoTablasAdmin[$c][9]."</td><td>".$infoTablasAdmin[$c][10]."</td>";
+														echo "<tr><td>".$infoTablasAdmin[$c][0]."</td><td>".$infoTablasAdmin[$c][1]."</td><td>".$infoTablasAdmin[$c][12]." ".$infoTablasAdmin[$c][13]."</td><td>".$infoTablasAdmin[$c][22]." ".$infoTablasAdmin[$c][23]."</td><td>".$infoTablasAdmin[$c][4]."</td><td>".$infoTablasAdmin[$c][31]."</td><td>".$infoTablasAdmin[$c][6]."</td><td>".$infoTablasAdmin[$c][7]."</td><td>".$infoTablasAdmin[$c][8]."</td><td>".$infoTablasAdmin[$c][9]."</td><td>".$infoTablasAdmin[$c][10]."</td>";
 
 														echo '<td><a onclick="abrirModalModServicio('."'".$infoTablasAdmin[$c][0]."'".')" class="btn btn-danger btn-sm" style="border-radius: 5px; font-size: 12px; font-weight: bold; background: #28B463; border: 1px solid #28B463;">Modificar</a></td>';
 

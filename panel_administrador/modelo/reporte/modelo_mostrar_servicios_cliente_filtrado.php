@@ -1,33 +1,10 @@
-<?php 
-session_start();
-?>
-			<div class="row">
-
-				<div class="col-md-10 col-sm-12" style='color:yellow;'>
-					<a href="#" class="btn btn-info" onclick="exportarServicioCliente()">Descargar pdf</a>Listado de todos los clientes quie hicieron un servicio registrados hasta la ultima fecha :<p>
-                </div>
-
-                <div class="col-md-4 col-sm-6" style='color:yellow;'>
-					Filtrar :<p>
-					<div class="input-daterange input-group fj-date">
-				    	<input type="text" class="input-sm form-control" value="Fecha Inicial" id="fechaInicial" readonly  />
-				    	<span class="input-group-addon">hasta</span><input type="text" class="input-sm form-control" value="Fecha Final" id="fechaFinal" readonly  />
-				    	
-					</div>
-					
-                </div>
-                <div class="col-md-4 col-sm-6" style='color:yellow;'>
-                	<br>
-                	<a href="#" class="btn btn-info btn-sm" onclick="buscarServicioCliente()">Buscar</a>
-                	<a href="#" class="btn btn-info btn-sm" onclick="reestablecerServicioCliente()">Reestablecer</a>
-				</div>
-	         </div><div id="contReporte"><p>
+<p>
 
 							<?php
 								$infoTablasAdmin="";
 								include_once("../../conector/conectadorSQL.php");
 
-								$result = mysqli_query($conectador, "SELECT c.ID_cliente, c.nombre, c.apellido, c.nit_ci, c.razon_social, c.direccion, c.celular, c.telefono, c.fecha, c.hora FROM cliente c, servicio s where c.ID_cliente=s.cliente group by c.ID_cliente  order by c.ID_cliente desc;"); 
+								$result = mysqli_query($conectador, "SELECT c.ID_cliente, c.nombre, c.apellido, c.nit_ci, c.razon_social, c.direccion, c.celular, c.telefono, c.fecha, c.hora FROM cliente c, servicio s where c.ID_cliente=s.cliente and c.fecha BETWEEN '".$_POST['fechaInicial']."' AND '".$_POST['fechaFinal']."' group by c.ID_cliente  order by c.ID_cliente desc;"); 
 								//Cargando datos de la BD a una variable matriz
 								$n=0;
 								while($fila=mysqli_fetch_array($result))
@@ -88,4 +65,3 @@ session_start();
 		   maxViewMode: 1
 	});
 	</script>
-   </div>
