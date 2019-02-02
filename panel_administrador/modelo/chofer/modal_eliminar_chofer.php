@@ -3,7 +3,7 @@ session_start();
 error_reporting(0);
 ?>
 
-
+<?php echo '
 <div class="modal fade" id="ModalEliminarChofer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
@@ -23,7 +23,7 @@ error_reporting(0);
 
       <!--Footer-->
       <div class="modal-footer justify-content-center" tyle="background: ; padding:10px; margin:0px; color:black;">
-        <?php echo '
+
         <a type="button" onclick="eliminarChofer('.$_POST['idChfElim'].')" class="btn btn-default btn-md" style="border-radius: 20px;">Aceptar
                   <i class="fa fa-paper-plane ml-1"></i>
                 </a>

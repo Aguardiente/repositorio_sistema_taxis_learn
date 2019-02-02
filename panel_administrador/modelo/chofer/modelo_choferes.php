@@ -11,7 +11,7 @@ session_start();
 								$infoTablasAdmin="";
 								include_once("../../conector/conectadorSQL.php");
 
-								$result = mysqli_query($conectador, "select * from chofer order by id_chofer desc;"); 
+								$result = mysqli_query($conectador, "select * from chofer ch, tipo t where ch.tipo_taxi=t.ID_tipo order by id_chofer desc;"); 
 								//Cargando datos de la BD a una variable matriz
 								$n=0;
 								while($fila=mysqli_fetch_array($result))
@@ -43,7 +43,7 @@ session_start();
 												$c=0;
 												while($c<sizeof($infoTablasAdmin)){
 
-														echo "<tr><td>".$infoTablasAdmin[$c][0]."</td><td>".$infoTablasAdmin[$c][1]."</td><td>".$infoTablasAdmin[$c][2]."</td><td>".$infoTablasAdmin[$c][3]."</td><td>".$infoTablasAdmin[$c][4]."</td><td>".$infoTablasAdmin[$c][5]."</td><td>".$infoTablasAdmin[$c][6]."</td><td>".$infoTablasAdmin[$c][7]."</td><td>".$infoTablasAdmin[$c][8]."</td>";
+														echo "<tr><td>".$infoTablasAdmin[$c][0]."</td><td>".$infoTablasAdmin[$c][1]."</td><td>".$infoTablasAdmin[$c][2]."</td><td>".$infoTablasAdmin[$c][10]."</td><td>".$infoTablasAdmin[$c][4]."</td><td>".$infoTablasAdmin[$c][5]."</td><td>".$infoTablasAdmin[$c][6]."</td><td>".$infoTablasAdmin[$c][7]."</td><td>".$infoTablasAdmin[$c][8]."</td>";
 
 														echo '<td><a onclick="abrirModalModChofer('."'".$infoTablasAdmin[$c][0]."'".')" class="btn btn-danger btn-sm" style="border-radius: 5px; font-size: 12px; font-weight: bold; background: #28B463; border: 1px solid #28B463;">Modificar</a></td>';
 
