@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-02-2019 a las 03:35:52
+-- Tiempo de generación: 02-02-2019 a las 18:19:20
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 5.6.39
 
@@ -40,6 +40,14 @@ CREATE TABLE `chofer` (
   `hora` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `chofer`
+--
+
+INSERT INTO `chofer` (`ID_chofer`, `nombre`, `apellido`, `tipo_taxi`, `direccion`, `celular`, `telefono`, `fecha`, `hora`) VALUES
+(5, 'alfredo epinafio', 'colque lora', 3, 'las palmas 3', 77554812, 4453210, '02/02/19', '1:57pm'),
+(6, 'Fraile', 'Lujan Coia', 2, 'Av. Siempre viva', 6658411, 488080, '02/02/19', '8:58am');
+
 -- --------------------------------------------------------
 
 --
@@ -64,7 +72,9 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`ID_cliente`, `nit_ci`, `nombre`, `apellido`, `razon_social`, `direccion`, `celular`, `telefono`, `fecha`, `hora`) VALUES
-(4, 222222, 'Juan qqq', 'SolizH', 'enquelugar', 'av. Padroww', 774512121, 4555521, '31/01/19', '4:41pm');
+(4, 222222, 'Juan', 'Soliz Rivera', 'Burguer Srl.', 'av. Padro', 774512121, 4555521, '01/02/19', '9:53am'),
+(5, 23432432, 'Eustacio', 'Maron Lauca', 'M Ltda.', 'Av. Las Maravillas', 7334324, 455676, '01/02/19', '9:51am'),
+(6, 213213432, 'Ramiro Gabriel', 'Borgues Guzman', 'Causas Inc', 'Av. Militar', 7645635, 463636, '02/02/19', '9:52am');
 
 -- --------------------------------------------------------
 
@@ -100,7 +110,7 @@ INSERT INTO `empresa` (`ID_empresa`, `razon_social`, `encargado`, `nit`, `num_au
 
 CREATE TABLE `factura` (
   `ID_Factura` int(11) NOT NULL,
-  `servicio` int(11) DEFAULT NULL,
+  `servicio` varchar(50) DEFAULT NULL,
   `chofer` int(11) DEFAULT NULL,
   `cliente` int(11) DEFAULT NULL,
   `descripcion` varchar(200) DEFAULT NULL,
@@ -112,6 +122,21 @@ CREATE TABLE `factura` (
   `fecha_emision` varchar(50) DEFAULT NULL,
   `hora` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `factura`
+--
+
+INSERT INTO `factura` (`ID_Factura`, `servicio`, `chofer`, `cliente`, `descripcion`, `tipo`, `total`, `pago`, `saldo`, `nit_cliente`, `fecha_emision`, `hora`) VALUES
+(1, '14', 5, 4, 'esta factura se hizo por motivos personales hhh', 3, 120, 800, 40, 445812221, '02/02/19', '6:25am'),
+(6, 'carrera', 5, 4, 'fdgfdg', 1, 321, 213, 11, 223232, '02/02/19', '1:26am'),
+(7, 'transporte', 5, 4, 'desesperada', 1, 221, 112, 333, 2147483647, '02/02/19', '1:29am'),
+(8, 'carrera', 5, 4, 'sdadsa', 1, 32, 123, 333, 14543212, '02/02/19', '1:30am'),
+(9, 'carrera', 5, 4, 'sdadsa', 1, 32, 123, 333, 14543212, '02/02/19', '1:30am'),
+(10, 'transporte', 5, 4, 'mañuda', 2, 2000, 2525, 1515, 888888, '02/02/19', '6:48am'),
+(11, 'carrera', 5, 4, 'sadsad', 1, 444, 3333, 55, 232132, '02/02/19', '1:39am'),
+(12, 'carrera', 5, 4, 'sasda', 1, 321, 123, 23, 433434, '02/02/19', '1:41am'),
+(13, 'transporte', 5, 4, 'sasdaAJA', 1, 321, 23, 123, 433434, '02/02/19', '6:46am');
 
 -- --------------------------------------------------------
 
@@ -156,6 +181,17 @@ CREATE TABLE `servicio` (
   `hora` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `servicio`
+--
+
+INSERT INTO `servicio` (`ID_servicio`, `servicio`, `chofer`, `cliente`, `descripcion`, `tipo`, `total`, `pago`, `saldo`, `fecha`, `hora`) VALUES
+(14, 'transporte', 5, 4, 'aqui hay oro', 1, 150, 120, 30, '11/02/2018', '10:20am'),
+(15, 'transporte', 5, 4, 'pachanga                            ', 2, 10, 20, 30, '02/02/19', '7:53am'),
+(18, 'transporte', 6, 5, 'Transporte de carga de frutas              ', 2, 123, 321, 111, '02/02/19', '2:54pm'),
+(19, 'carrera', 5, 6, 'Carrera simple de lugar X a lugar Y              ', 1, 400, 100, 300, '02/02/19', '2:56pm'),
+(20, 'carrera', 6, 6, 'Carga de instrumentos musicales', 2, 700, 400, 300, '02/02/19', '2:57pm');
+
 -- --------------------------------------------------------
 
 --
@@ -180,7 +216,7 @@ CREATE TABLE `taxi` (
 INSERT INTO `taxi` (`ID_taxi`, `numero_movil`, `placa`, `modelo`, `marca`, `descripcion`, `fecha`, `hora`) VALUES
 (1, 12321321, 'sadsadsad', 'caldina', 'toyota', 'sadsadad', '24/01/19', '1:57pm'),
 (2, 213, 'asd', 'sadsadsa', 'dsadsa', 'sad', '01/02/19', '10:49pm'),
-(3, 2321, 'dsadsa', 'wwww', 'sdadsa', 'sdadas', '01/02/19', '11:34pm');
+(3, 2321, 'AER-112', 'WB', 'Toyota', 'El material de este auto es el cromo', '02/02/19', '2:00pm');
 
 -- --------------------------------------------------------
 
@@ -202,7 +238,7 @@ CREATE TABLE `tipo` (
 INSERT INTO `tipo` (`ID_tipo`, `tipo_taxi`, `fecha`, `hora`) VALUES
 (1, 'servicio', '24/01/19', '6:49pm'),
 (2, 'transporte', '26/01/19', '7:08pm'),
-(3, 'ahora si se que tipo', '01/02/19', '11:02pm');
+(3, 'carga', '02/02/19', '2:12pm');
 
 -- --------------------------------------------------------
 
@@ -299,13 +335,13 @@ ALTER TABLE `usuario_administrador`
 -- AUTO_INCREMENT de la tabla `chofer`
 --
 ALTER TABLE `chofer`
-  MODIFY `ID_chofer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID_chofer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `ID_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `empresa`
@@ -317,7 +353,7 @@ ALTER TABLE `empresa`
 -- AUTO_INCREMENT de la tabla `factura`
 --
 ALTER TABLE `factura`
-  MODIFY `ID_Factura` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_Factura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `reporte`
@@ -329,7 +365,7 @@ ALTER TABLE `reporte`
 -- AUTO_INCREMENT de la tabla `servicio`
 --
 ALTER TABLE `servicio`
-  MODIFY `ID_servicio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `ID_servicio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de la tabla `taxi`
@@ -341,7 +377,7 @@ ALTER TABLE `taxi`
 -- AUTO_INCREMENT de la tabla `tipo`
 --
 ALTER TABLE `tipo`
-  MODIFY `ID_tipo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID_tipo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario_administrador`
@@ -365,7 +401,6 @@ ALTER TABLE `chofer`
 ALTER TABLE `factura`
   ADD CONSTRAINT `restriccion_factura_chofer` FOREIGN KEY (`chofer`) REFERENCES `chofer` (`ID_chofer`),
   ADD CONSTRAINT `restriccion_factura_cliente` FOREIGN KEY (`cliente`) REFERENCES `cliente` (`ID_cliente`),
-  ADD CONSTRAINT `restriccion_factura_servicio` FOREIGN KEY (`servicio`) REFERENCES `servicio` (`ID_servicio`),
   ADD CONSTRAINT `restriccion_factura_tipo` FOREIGN KEY (`tipo`) REFERENCES `tipo` (`ID_tipo`);
 
 --

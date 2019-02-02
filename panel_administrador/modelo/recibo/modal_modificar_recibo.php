@@ -22,7 +22,7 @@ include("../../conector/conectadorSQL.php");
  $ID_Factura = $_POST['idRecMod'];
 
 
- $query = mysqli_query($conectador, "select * from factura f, servicio s, chofer ch, cliente c, tipo t where f.ID_factura='$ID_Factura' and f.chofer=ch.ID_chofer and f.cliente=c.ID_cliente and f.tipo=t.ID_tipo order by id_factura desc; ");
+ $query = mysqli_query($conectador, "select * from factura f, servicio s, chofer ch, cliente c, tipo t where f.ID_factura='$ID_Factura' and f.chofer=ch.ID_chofer and f.cliente=c.ID_cliente and f.tipo=t.ID_tipo");
  while($row = mysqli_fetch_array($query))
   {
       ?> 
