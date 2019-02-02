@@ -41,14 +41,14 @@ session_start();
 
 												$c=0;
 												while($c<sizeof($infoTablasAdmin)){
-													if($infoTablasAdmin[$c][0]>0){
+										
 														echo "<tr><td>".$infoTablasAdmin[$c][0]."</td><td>".$infoTablasAdmin[$c][1]."</td><td>".$infoTablasAdmin[$c][2]."</td><td>".$infoTablasAdmin[$c][3]."</td><td>".$infoTablasAdmin[$c][4]."</td><td>".$infoTablasAdmin[$c][5]."</td><td>".$infoTablasAdmin[$c][6]."</td><td>".$infoTablasAdmin[$c][7]."</td>";
 
 														echo '<td><a onclick="abrirModalModTaxi('."'".$infoTablasAdmin[$c][0]."'".')" class="btn btn-danger btn-sm" style="border-radius: 5px; font-size: 12px; font-weight: bold; background: #28B463; border: 1px solid #28B463;">Modificar</a></td>';
 
 												        echo '<td><a onclick="abrirModalElimTaxi('.$infoTablasAdmin[$c][0].')" class="btn btn-danger btn-sm" style="border-radius: 5px; font-size: 12px; font-weight: bold; background: #ee6641; border: 1px solid #ee6641;">Eliminar</a></td>';
 
-													}
+									
 													$c++;
 												}
 									echo'   </tbody>

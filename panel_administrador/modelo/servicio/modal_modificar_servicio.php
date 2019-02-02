@@ -22,9 +22,9 @@ include("../../conector/conectadorSQL.php");
 
  $ID_servicio = $_POST['idSerMod'];
 
+ $query = mysqli_query($conectador, "select * from servicio s, chofer ch, cliente c, tipo t where s.chofer=ch.ID_chofer and s.cliente=c.ID_cliente and s.tipo=t.ID_tipo and ID_servicio='$ID_servicio' order by id_servicio desc;");
 
- $query = mysqli_query($conectador, "SELECT * FROM servicio WHERE ID_servicio='$ID_servicio'");
- while($row = mysqli_fetch_array($query))
+while($row = mysqli_fetch_array($query))
   {
       ?> 
       <div class='row'>
@@ -38,7 +38,7 @@ include("../../conector/conectadorSQL.php");
 
               <label style='font-family:"Cooper Black"'>Servicio:</label></br>
               <select id='servicio' class='md-form mdb-select colorful-select dropdown-primary'>
-        <?php echo  "<option value='".$row['servicio']."' disabled selected>".$row['servicio']."</option>"; ?>
+        <?php echo  "<option value='".$row[1]."' disabled selected>".$row[1]."</option>"; ?>
                     <option value='carrera' >Carrera</option>
                     <option value='transporte' >Transporte</option>
               </select>
@@ -46,7 +46,7 @@ include("../../conector/conectadorSQL.php");
 
 
               <label style='font-family:"Cooper Black"'>Descripción:</label></br>
-              <textarea rows="8" type='text' id='descripcion' class='form-control' placeholder='(*)Escriba su descripcion' maxlength='1000'><?php echo $row['descripcion']; ?>
+              <textarea rows="8" type='text' id='descripcion' class='form-control' placeholder='(*)Escriba su descripcion' maxlength='1000'><?php echo $row[4]; ?>
               </textarea>
                <div id='resp_descripcion'></div>
                </div> 
@@ -71,12 +71,12 @@ include("../../conector/conectadorSQL.php");
 
                  echo "<label style='font-family:Cooper Black'>Cliente:</label></br>
                   <select name='cliente' id='cliente' class='md-form mdb-select colorful-select dropdown-primary'>
-                    <option value='".$row['cliente']."' disabled selected>".$row['cliente']."</option>";
+                    <option value='".$row[3]."' disabled selected>".$row[22].$row[23]."</option>";
                    
                           $c=0;
                         while($c<sizeof($infoTablasAdmin)){
 
-                          echo "<option value='".$infoTablasAdmin[$c][2]."' >".$infoTablasAdmin[$c][2]." ".$infoTablasAdmin[$c][3]."</option>";
+                          echo "<option value='".$infoTablasAdmin[$c][0]."' >".$infoTablasAdmin[$c][2]." ".$infoTablasAdmin[$c][3]."</option>";
 
                           $c++;
                         }
@@ -111,12 +111,12 @@ include("../../conector/conectadorSQL.php");
                  echo "<label style='font-family:Cooper Black'>Chofer:</label></br>
                   <select name='chofer' id='chofer' class='md-form mdb-select colorful-select dropdown-primary'>
 
-                    <option value='".$row['chofer']."' disabled selected>".$row['chofer']."</option>";
+                    <option value='".$row[2]."' disabled selected>".$row[12]." ".$row[13]."</option>";
                    
                           $c=0;
                         while($c<sizeof($infoTablasAdmin)){
 
-                          echo "<option value='".$infoTablasAdmin[$c][1]."' >".$infoTablasAdmin[$c][1]."</option>";
+                          echo "<option value='".$infoTablasAdmin[$c][0]."' >".$infoTablasAdmin[$c][1].$infoTablasAdmin[$c][2]."</option>";
 
                           $c++;
                         }
@@ -149,12 +149,12 @@ include("../../conector/conectadorSQL.php");
 
                  echo "<label style='font-family:Cooper Black'>Tipo de taxi</label></br>
                   <select name='tipo' id='tipo' class='md-form mdb-select colorful-select dropdown-primary'>
-                    <option value='".$row['tipo']."' disabled selected>".$row['tipo']."</option>";
+                    <option value='".$row[5]."' disabled selected>".$row[31]."</option>";
                    
                           $c=0;
                         while($c<sizeof($infoTablasAdmin)){
 
-                          echo "<option value='".$infoTablasAdmin[$c][1]."' >".$infoTablasAdmin[$c][1]."</option>";
+                          echo "<option value='".$infoTablasAdmin[$c][0]."' >".$infoTablasAdmin[$c][1]."</option>";
 
                           $c++;
                         }
@@ -175,7 +175,7 @@ include("../../conector/conectadorSQL.php");
 <?php 
 echo "
               <label style='font-family:'Cooper Black''>Total:</label></br>
-               <input type='number' id='total' class='form-control' placeholder='(*)Escriba su total' value='".$row['total']."' maxlength='10' min='0'  onkeypress='return valida_numeros(event);'>
+               <input type='number' id='total' class='form-control' placeholder='(*)Escriba su total' value='".$row[6]."' maxlength='10' min='0'  onkeypress='return valida_numeros(event);'>
 
                <div id='resp_total' ></div>
                </div> 
@@ -183,7 +183,7 @@ echo "
                <div class='col-lg-6 col-xs-6'> 
                
                <label style='font-family:'Cooper Black''>Pago:</label></br>
-               <input type='number' id='pago' class='form-control' placeholder='(*)Escriba su pago' value='".$row['pago']."' maxlength='10' min='0'  onkeypress='return valida_numeros(event);'>
+               <input type='number' id='pago' class='form-control' placeholder='(*)Escriba su pago' value='".$row[7]."' maxlength='10' min='0'  onkeypress='return valida_numeros(event);'>
 
                <div id='resp_pago' ></div>
                </div> 
@@ -191,7 +191,7 @@ echo "
                <div class='col-lg-6 col-xs-6'> 
                
                <label style='font-family:'Cooper Black''>Saldo:</label></br>
-               <input type='number' id='saldo' class='form-control' placeholder='(*)Escriba su saldo' value='".$row['saldo']."' maxlength='10' min='0'  onkeypress='return valida_numeros(event);'>
+               <input type='number' id='saldo' class='form-control' placeholder='(*)Escriba su saldo' value='".$row[8]."' maxlength='10' min='0'  onkeypress='return valida_numeros(event);'>
 ";
 ?>
                   
