@@ -81,7 +81,11 @@ error_reporting(0);
     $tablas(document).ready(function() {
         $tablas('#servicios_cliente').DataTable({
             "aaSorting": [[ 0, "desc" ]],
-            responsive: true
+            responsive: true,
+            dom: 'Bfrtip',
+          buttons: [
+              'copy', 'csv', 'excel', 'pdf', 'print'
+          ]
         });
     });
     </script>

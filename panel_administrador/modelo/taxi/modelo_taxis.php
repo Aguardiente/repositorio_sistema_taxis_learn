@@ -64,7 +64,11 @@ session_start();
     $tablas(document).ready(function() {
         $tablas('#dataTables-example').DataTable({
             "aaSorting": [[ 0, "desc" ]],
-            responsive: true
+            responsive: true,
+            dom: 'Bfrtip',
+	        buttons: [
+	            'copy', 'csv', 'excel', 'pdf', 'print'
+	        ]
         });
     });
     </script>
