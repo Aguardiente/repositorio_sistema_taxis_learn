@@ -266,8 +266,11 @@ error_reporting(0);
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
-	
-
+    
+    <script src="../libreria/jquery.min.js"></script>
+    <link rel="stylesheet" href="../owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../owlcarousel/assets/animate.css">
+    <script src="../owlcarousel/owl.carousel.min.js"></script>
 
 </body>
 
