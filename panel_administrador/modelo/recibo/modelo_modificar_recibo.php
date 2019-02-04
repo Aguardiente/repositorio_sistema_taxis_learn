@@ -60,7 +60,7 @@ include("../../conector/conectadorSQL.php");
        {
        $query = mysqli_query($conectador,"UPDATE `Factura` SET `nit_cliente` = '$nit_cliente' WHERE `ID_Factura` = $ID_Factura");$cadena.=' Se edito nit_cliente , ';
        } 
-       $query = mysqli_query($conectador,"UPDATE `Factura` SET `fecha_emision` = '".date('d/m/y')."' WHERE `ID_Factura` = $ID_Factura");$cadena.=' Se edito fecha_emision , ';
+       $query = mysqli_query($conectador,"UPDATE `Factura` SET `fecha_emision` = '".date('y/m/d')."' WHERE `ID_Factura` = $ID_Factura");$cadena.=' Se edito fecha_emision , ';
        $query = mysqli_query($conectador,"UPDATE `Factura` SET `hora` = '".date('g:ia')."' WHERE `ID_Factura` = $ID_Factura");$cadena.=' Se edito hora , ';
   
   echo "<script>verRecibos();</script>";

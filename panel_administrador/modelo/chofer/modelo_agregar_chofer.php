@@ -12,7 +12,7 @@
    
 include("../../conector/conectadorSQL.php");
       date_default_timezone_set('America/Caracas');
-  $sql=mysqli_query($conectador,"INSERT INTO `chofer` (`ID_chofer`,`nombre` ,`apellido` ,`tipo_taxi` ,`direccion` ,`celular` ,`telefono` ,`fecha` ,`hora` ) VALUES (NULL, '$nombre' , '$apellido' , '$tipo_taxi' , '$direccion' , '$celular' , '$telefono' , '".date('d/m/y')."' , '".date('g:ia')."' )"); 
+  $sql=mysqli_query($conectador,"INSERT INTO `chofer` (`ID_chofer`,`nombre` ,`apellido` ,`tipo_taxi` ,`direccion` ,`celular` ,`telefono` ,`fecha` ,`hora` ) VALUES (NULL, '$nombre' , '$apellido' , '$tipo_taxi' , '$direccion' , '$celular' , '$telefono' , '".date('y/m/d')."' , '".date('g:ia')."' )"); 
 
   echo "<script>verChoferes();</script>";
 

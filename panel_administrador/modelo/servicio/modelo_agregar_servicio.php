@@ -13,7 +13,7 @@
 //  $hora= $_POST['hora']; //$fecha = cambiaf_a_mysql($fecha);
    
 include("../../conector/conectadorSQL.php");
-  $sql=mysqli_query($conectador,"INSERT INTO `servicio` (`ID_servicio`,`servicio` ,`chofer` ,`cliente` ,`descripcion` ,`tipo` ,`total` ,`pago` ,`saldo` ,`fecha` ,`hora` ) VALUES (NULL, '$servicio' , '$chofer' , '$cliente' , '$descripcion' , '$tipo' , '$total' , '$pago' , '$saldo' , '".date('d/m/y')."' , '".date('g:ia')."' )"); 
+  $sql=mysqli_query($conectador,"INSERT INTO `servicio` (`ID_servicio`,`servicio` ,`chofer` ,`cliente` ,`descripcion` ,`tipo` ,`total` ,`pago` ,`saldo` ,`fecha` ,`hora` ) VALUES (NULL, '$servicio' , '$chofer' , '$cliente' , '$descripcion' , '$tipo' , '$total' , '$pago' , '$saldo' , '".date('y/m/d')."' , '".date('g:ia')."' )"); 
 
  echo "<script>verServicios();</script>";
 

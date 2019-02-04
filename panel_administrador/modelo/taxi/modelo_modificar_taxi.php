@@ -33,7 +33,7 @@ include("../../conector/conectadorSQL.php");
        {
        $query = mysqli_query($conectador,"UPDATE `taxi` SET `modelo` = '$modelo' WHERE `ID_taxi` = $ID_taxi");$cadena.=' Se edito modelo , ';
        } 
-       $query = mysqli_query($conectador,"UPDATE `taxi` SET `fecha` = '".date('d/m/y')."' WHERE `ID_taxi` = $ID_taxi");$cadena.=' Se edito fecha , ';
+       $query = mysqli_query($conectador,"UPDATE `taxi` SET `fecha` = '".date('y/m/d')."' WHERE `ID_taxi` = $ID_taxi");$cadena.=' Se edito fecha , ';
        $query = mysqli_query($conectador,"UPDATE `taxi` SET `hora` = '".date('g:ia')."' WHERE `ID_taxi` = $ID_taxi");$cadena.=' Se edito hora , ';
 
       echo "<script>verTaxis();</script>";

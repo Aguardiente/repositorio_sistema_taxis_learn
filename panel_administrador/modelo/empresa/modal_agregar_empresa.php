@@ -81,7 +81,7 @@ error_reporting(0);
 
     <script>
     $calendario('.datepicker').datepicker({
-         format: "dd/mm/yy",
+         format: "yy/mm/dd",
          language: "es",
          multidate: false,
          maxViewMode: 1

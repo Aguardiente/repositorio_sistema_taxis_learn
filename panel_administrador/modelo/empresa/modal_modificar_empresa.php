@@ -74,7 +74,7 @@ include("../../conector/conectadorSQL.php");
 
        <label style='font-family:"Cooper Black"'> Fecha Limite de facturación: </label> 
        <?php echo $fecha_limite=$row['fecha_limite']; ?>
-        <input type="text" class="datepicker" id="fecha_limite" value="<?php echo $fecha_limite;?>" placeholder="(*)Escriba su fecha_limite" onkeyup="validador_campo('fecha_limite','resp_fecha_limite',4)"" maxlength="20">
+        <input type="text" class="datepicker" id="fecha_limite" value="<?php echo $fecha_limite;?>" placeholder="(*)Escriba su fecha_limite" >
         <div id="resp_fecha_limite"></div>
         </div>
         </br><hr>
@@ -105,7 +105,7 @@ include("../../conector/conectadorSQL.php");
 
     <script>
     $calendario('.datepicker').datepicker({
-         format: "dd/mm/yy",
+         format: "yy/mm/dd",
          language: "es",
          multidate: false,
          maxViewMode: 1

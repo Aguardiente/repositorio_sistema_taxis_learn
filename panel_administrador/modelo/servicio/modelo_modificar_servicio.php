@@ -55,7 +55,7 @@ include("../../conector/conectadorSQL.php");
        $query = mysqli_query($conectador,"UPDATE `servicio` SET `saldo` = '$saldo' WHERE `ID_servicio` = $ID_servicio");$cadena.=' Se edito saldo , ';
        } 
 
-       $query = mysqli_query($conectador,"UPDATE `servicio` SET `fecha` = '".date('d/m/y')."' WHERE `ID_servicio` = $ID_servicio");$cadena.=' Se edito fecha , ';
+       $query = mysqli_query($conectador,"UPDATE `servicio` SET `fecha` = '".date('y/m/d')."' WHERE `ID_servicio` = $ID_servicio");$cadena.=' Se edito fecha , ';
 
        $query = mysqli_query($conectador,"UPDATE `servicio` SET `hora` = '".date('g:ia')."' WHERE `ID_servicio` = $ID_servicio");$cadena.=' Se edito hora , ';
 

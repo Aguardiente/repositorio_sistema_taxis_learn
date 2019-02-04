@@ -38,7 +38,7 @@
        } 
        if($fecha!='')
        {
-       $query = mysqli_query($conectador,"UPDATE `empresa` SET `fecha` = '$fecha' WHERE `ID_empresa` = ".date('d/m/y')." ");$cadena.=' Se edito fecha , ';
+       $query = mysqli_query($conectador,"UPDATE `empresa` SET `fecha` = '$fecha' WHERE `ID_empresa` = ".date('y/m/d')." ");$cadena.=' Se edito fecha , ';
        } 
        if($hora!='')
        {

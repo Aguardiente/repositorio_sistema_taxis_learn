@@ -42,7 +42,7 @@
        {
        $query = mysqli_query($conectador,"UPDATE `chofer` SET `telefono` = '$telefono' WHERE `ID_chofer` = $ID_chofer");$cadena.=' Se edito telefono , ';
        } 
-       $query = mysqli_query($conectador,"UPDATE `chofer` SET `fecha` = '".date('d/m/y')."' WHERE `ID_chofer` = $ID_chofer");$cadena.=' Se edito fecha , ';
+       $query = mysqli_query($conectador,"UPDATE `chofer` SET `fecha` = '".date('y/m/d')."' WHERE `ID_chofer` = $ID_chofer");$cadena.=' Se edito fecha , ';
        $query = mysqli_query($conectador,"UPDATE `chofer` SET `hora` = '".date('g:ia')."' WHERE `ID_chofer` = $ID_chofer");$cadena.=' Se edito hora , ';
   
   echo "<script>verChoferes();</script>";

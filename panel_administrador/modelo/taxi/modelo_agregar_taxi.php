@@ -9,7 +9,7 @@
 
   include("../../conector/conectadorSQL.php");
   date_default_timezone_set('America/Caracas');
-  $sql=mysqli_query($conectador,"INSERT INTO `taxi` (`ID_taxi`, `numero_movil` ,`placa` , `modelo` ,`marca` , `descripcion`,`fecha` ,`hora` ) VALUES (NULL, '$nro_movil' , '$placa' , '$modelo' , '$marca' , '$descripcion', '".date('d/m/y')."' , '".date('g:ia')."' )"); 
+  $sql=mysqli_query($conectador,"INSERT INTO `taxi` (`ID_taxi`, `numero_movil` ,`placa` , `modelo` ,`marca` , `descripcion`,`fecha` ,`hora` ) VALUES (NULL, '$nro_movil' , '$placa' , '$modelo' , '$marca' , '$descripcion', '".date('y/m/d')."' , '".date('g:ia')."' )"); 
 
 echo "<script>verTaxis();</script>";
     ?>

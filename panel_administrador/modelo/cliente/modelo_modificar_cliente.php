@@ -49,7 +49,7 @@ include("../../conector/conectadorSQL.php");
        } 
 
 
-       $query = mysqli_query($conectador,"UPDATE `cliente` SET `fecha` = '".date('d/m/y')."' WHERE `ID_cliente` = $ID_cliente");$cadena.=' Se edito fecha , ';
+       $query = mysqli_query($conectador,"UPDATE `cliente` SET `fecha` = '".date('y/m/d')."' WHERE `ID_cliente` = $ID_cliente");$cadena.=' Se edito fecha , ';
 
 
 

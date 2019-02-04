@@ -47,7 +47,7 @@ include("../../conector/conectadorSQL.php");
 
                  echo "<label style='font-family:Cooper Black'>Cliente:".$row[23]." ".$row[24]."</label></br>
                   <select name='cliente' id='cliente' class='md-form mdb-select colorful-select dropdown-primary'>
-                    <option value='".$row[3]."' disabled selected>".$row[34]." ".$row[35]."</option>";
+                    <option value='".$row[3]."' disabled selected>".$row[23]." ".$row[24]."</option>";
                    
                           $c=0;
                         while($c<sizeof($infoTablasAdmin)){

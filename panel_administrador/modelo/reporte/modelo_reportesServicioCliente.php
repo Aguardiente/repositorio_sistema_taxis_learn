@@ -90,7 +90,7 @@ session_start();
         });
     });
     $calendario('.fj-date').datepicker({
-		   format: "dd/mm/yy",
+		   format: "yy/mm/dd",
 		   language: "es",
 		   multidate: false,
 		   maxViewMode: 1
