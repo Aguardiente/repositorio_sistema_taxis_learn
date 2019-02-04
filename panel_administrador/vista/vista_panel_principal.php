@@ -81,7 +81,6 @@ error_reporting(0);
                 <a href="#" data-toggle="tooltip" data-placement="bottom" title="Ir al inicio" onclick="verHome()">
                   <div class="text-center">
                     <div class="menu-item">
-                      <i class="glyphicon glyphicon-home"></i>
                       <p>Inicio</p>
                     </div>
                   </div>
@@ -91,7 +90,6 @@ error_reporting(0);
                 <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Administradores" onclick="verUsuarios()">
                   <div class="text-center">
                     <div class="menu-item">
-                      <i class="glyphicon glyphicon-th"></i>
                       <p>Perfil</p>
                     </div>
                   </div>
@@ -101,7 +99,6 @@ error_reporting(0);
                 <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Administradores" onclick="verClientes()">
                   <div class="text-center">
                     <div class="menu-item">
-                      <i class="glyphicon glyphicon-th"></i>
                       <p>Cliente</p>
                     </div>
                   </div>
@@ -111,7 +108,6 @@ error_reporting(0);
                 <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Proveedores" onclick="verEmpresas()">
                   <div class="text-center">
                     <div class="menu-item">
-                      <i class="glyphicon glyphicon-globe"></i>
                       <p>Empresa</p>
                     </div>
                   </div>
@@ -121,7 +117,6 @@ error_reporting(0);
                 <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Inventario" onclick="verRecibos()">
                   <div class="text-center">
                     <div class="menu-item">
-                      <i class="glyphicon glyphicon-briefcase"></i>
                       <p>Recibo</p>
                     </div>
                   </div>
@@ -131,7 +126,6 @@ error_reporting(0);
                 <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Clientes" onclick="verServicios()">
                   <div class="text-center">
                     <div class="menu-item">
-                      <i class="glyphicon glyphicon-user"></i>
                       <p>Servicio</p>
                     </div>
                   </div>
@@ -141,7 +135,6 @@ error_reporting(0);
                 <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Clientes" onclick="verReportes()">
                   <div class="text-center">
                     <div class="menu-item">
-                      <i class="glyphicon glyphicon-user"></i>
                       <p>Reporte</p>
                     </div>
                   </div>
@@ -151,7 +144,6 @@ error_reporting(0);
                 <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Clientes" onclick="verChoferes()">
                   <div class="text-center">
                     <div class="menu-item">
-                      <i class="glyphicon glyphicon-user"></i>
                       <p>Chofer</p>
                     </div>
                   </div>
@@ -161,7 +153,6 @@ error_reporting(0);
                 <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Clientes" onclick="verTaxis()">
                   <div class="text-center">
                     <div class="menu-item">
-                      <i class="glyphicon glyphicon-user"></i>
                       <p>Taxi</p>
                     </div>
                   </div>
@@ -171,7 +162,6 @@ error_reporting(0);
                 <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Clientes" onclick="verTipos()">
                   <div class="text-center">
                     <div class="menu-item">
-                      <i class="glyphicon glyphicon-user"></i>
                       <p>Tipo</p>
                     </div>
                   </div>
@@ -181,7 +171,6 @@ error_reporting(0);
                 <a href="#" data-toggle="tooltip" data-placement="bottom" title="Sale de la sesion" onclick="salirSistema()">
                   <div class="text-center">
                     <div class="menu-item">
-                      <i class="glyphicon glyphicon-off"></i>
                       <p>Salir</p>
                     </div>
                   </div>
