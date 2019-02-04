@@ -55,7 +55,7 @@ error_reporting(0);
                <div id='resp_marca'></div>
                </div> 
                
-              <div class='col-lg-6 col-xs-6'> 
+              <div class='col-lg-12 col-xs-12'> 
               
               <label style='font-family:"Cooper Black"'>Descripción:</label></br>
               <textarea rows="8" type='text' id='descripcion' class='form-control' placeholder='(*)Escriba su descripcion' onkeyup="validador_campo('descripcion','resp_descripcion',4)" maxlength='200' onkeypress='return valida_letras(event);'></textarea>

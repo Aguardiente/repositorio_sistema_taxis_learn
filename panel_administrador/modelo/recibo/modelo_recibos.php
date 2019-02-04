@@ -11,7 +11,7 @@ session_start();
 								$infoTablasAdmin="";
 								include_once("../../conector/conectadorSQL.php");
 
-								$result = mysqli_query($conectador, "select * from factura f, servicio s, chofer ch, cliente c, tipo t where f.chofer=ch.ID_chofer and f.cliente=c.ID_cliente and f.tipo=t.ID_tipo order by id_factura desc;"); 
+								$result = mysqli_query($conectador, "select * from factura f, chofer ch, cliente c, tipo t where f.chofer=ch.ID_chofer and f.cliente=c.ID_cliente and f.tipo=t.ID_tipo order by id_factura desc;"); 
 								//Cargando datos de la BD a una variable matriz
 								$n=0;
 								while($fila=mysqli_fetch_array($result))
@@ -47,7 +47,7 @@ session_start();
 												$c=0;
 												while($c<sizeof($infoTablasAdmin)){
 
-														echo "<tr><td>".$infoTablasAdmin[$c][0]."</td><td>".$infoTablasAdmin[$c][1]."</td><td>".$infoTablasAdmin[$c][24]." ".$infoTablasAdmin[$c][25]."</td><td>".$infoTablasAdmin[$c][34]." ".$infoTablasAdmin[$c][35]."</td><td>".$infoTablasAdmin[$c][4]."</td><td>".$infoTablasAdmin[$c][43]."</td><td>".$infoTablasAdmin[$c][6]."</td><td>".$infoTablasAdmin[$c][7]."</td><td>".$infoTablasAdmin[$c][8]."</td><td>".$infoTablasAdmin[$c][9]."</td><td>".$infoTablasAdmin[$c][10]."</td><td>".$infoTablasAdmin[$c][11]."</td>";
+														echo "<tr><td>".$infoTablasAdmin[$c][0]."</td><td>".$infoTablasAdmin[$c][1]."</td><td>".$infoTablasAdmin[$c][13]." ".$infoTablasAdmin[$c][14]."</td><td>".$infoTablasAdmin[$c][23]." ".$infoTablasAdmin[$c][24]."</td><td>".$infoTablasAdmin[$c][4]."</td><td>".$infoTablasAdmin[$c][32]."</td><td>".$infoTablasAdmin[$c][6]."</td><td>".$infoTablasAdmin[$c][7]."</td><td>".$infoTablasAdmin[$c][8]."</td><td>".$infoTablasAdmin[$c][9]."</td><td>".$infoTablasAdmin[$c][10]."</td><td>".$infoTablasAdmin[$c][11]."</td>";
 
 														echo '<td><a onclick="abrirModalModRecibo('."'".$infoTablasAdmin[$c][0]."'".')" class="btn btn-danger btn-sm" style="border-radius: 5px; font-size: 12px; font-weight: bold; background: #28B463; border: 1px solid #28B463;">Modificar</a></td>';
 

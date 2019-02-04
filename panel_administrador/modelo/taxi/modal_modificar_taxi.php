@@ -67,7 +67,7 @@ include("../../conector/conectadorSQL.php");
                <div id='resp_marca'></div>
                </div> 
                
-              <div class='col-lg-6 col-xs-6'> 
+              <div class='col-lg-12 col-xs-12'> 
               
               <label style='font-family:"Cooper Black"'>Descripción:<?php echo $$row['descripcion']; ?></label></br>
 <?php echo "

@@ -22,7 +22,7 @@ include("../../conector/conectadorSQL.php");
  $ID_Factura = $_POST['idRecMod'];
 
 
- $query = mysqli_query($conectador, "select * from factura f, servicio s, chofer ch, cliente c, tipo t where f.ID_factura='$ID_Factura' and f.chofer=ch.ID_chofer and f.cliente=c.ID_cliente and f.tipo=t.ID_tipo");
+ $query = mysqli_query($conectador, "select * from factura f, chofer ch, cliente c, tipo t where f.ID_factura='$ID_Factura' and f.chofer=ch.ID_chofer and f.cliente=c.ID_cliente and f.tipo=t.ID_tipo");
  while($row = mysqli_fetch_array($query))
   {
       ?> 
@@ -45,7 +45,7 @@ include("../../conector/conectadorSQL.php");
                   $n++;
                 }
 
-                 echo "<label style='font-family:Cooper Black'>Cliente:".$row[34]." ".$row[35]."</label></br>
+                 echo "<label style='font-family:Cooper Black'>Cliente:".$row[23]." ".$row[24]."</label></br>
                   <select name='cliente' id='cliente' class='md-form mdb-select colorful-select dropdown-primary'>
                     <option value='".$row[3]."' disabled selected>".$row[34]." ".$row[35]."</option>";
                    
@@ -97,7 +97,7 @@ include("../../conector/conectadorSQL.php");
 
                  echo "<label style='font-family:Cooper Black'>Tipo de taxi</label></br>
                   <select name='tipoRegRec' id='tipo' class='md-form mdb-select colorful-select dropdown-primary'>
-                    <option value='".$row[5]."' disabled selected>".$row[43]."</option>";
+                    <option value='".$row[5]."' disabled selected>".$row[32]."</option>";
                    
                           $c=0;
                         while($c<sizeof($infoTablasAdmin)){
@@ -130,9 +130,9 @@ include("../../conector/conectadorSQL.php");
                 }
        
 
-                 echo "<label style='font-family:Cooper Black'>Chofer: ".$row[24]." ".$row[25]."</label></br>
+                 echo "<label style='font-family:Cooper Black'>Chofer: ".$row[13]." ".$row[14]."</label></br>
                   <select name='chofer' id='chofer' class='md-form mdb-select colorful-select dropdown-primary'>
-                    <option value='".$row[2]."' disabled selected>".$row[24]." ".$row[25]."</option>";
+                    <option value='".$row[2]."' disabled selected>".$row[13]." ".$row[14]."</option>";
                    
                           $c=0;
                         while($c<sizeof($infoTablasAdmin)){
@@ -160,18 +160,18 @@ include("../../conector/conectadorSQL.php");
               </select>
                <div id='resp_servicio'></div>
 
-               <label style='font-family:'Cooper Black''>Pago:</label></br>
-               <input type='number' value='".$row[8]."' id='pago' class='form-control' placeholder='(*)Escriba su pago'  maxlength='10' min='0'  onkeypress='return valida_numeros(event);'>
-
-               <div id='resp_pago' ></div>
-  
                <label style='font-family:'Cooper Black''>Total:</label></br>
                <input type='number' value='".$row[6]."'  id='total' class='form-control' placeholder='(*)Escriba su total' maxlength='10' min='0'  onkeypress='return valida_numeros(event);'>
 
                <div id='resp_total' ></div>
 
+               <label style='font-family:'Cooper Black''>Pago:</label></br>
+               <input type='number' value='".$row[7]."' id='pago' class='form-control' placeholder='(*)Escriba su pago'  maxlength='10' min='0'  onkeypress='return valida_numeros(event);'>
+
+               <div id='resp_pago' ></div>
+  
                 <label style='font-family:'Cooper Black''>Saldo:</label></br>
-               <input type='number' value='".$row[7]."'  id='saldo' class='form-control' placeholder='(*)Escriba su saldo' maxlength='10' min='0'  onkeypress='return valida_numeros(event);'>
+               <input type='number' value='".$row[8]."'  id='saldo' class='form-control' placeholder='(*)Escriba su saldo' maxlength='10' min='0'  onkeypress='return valida_numeros(event);'>
 
                <div id='resp_saldo' ></div>
                </div> 

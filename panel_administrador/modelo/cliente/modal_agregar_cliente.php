@@ -47,7 +47,7 @@ error_reporting(0);
               <div class='col-lg-6 col-xs-6'> 
               
               <label style='font-family:"Cooper Black"'>Razón Social:</label></br>
-              <input type='text' id='razon_socialCli' class='form-control' placeholder='(*)Escriba su razón social' onkeyup="validador_campo('razon_social','resp_razon_social',4)" maxlength='10' min='2'  onkeypress='return valida_letras(event);'>
+              <input type='text' id='razon_socialCli' class='form-control' placeholder='(*)Escriba su razón social' onkeyup="validador_campo('razon_social','resp_razon_social',4)" maxlength='50' min='2'  onkeypress='return valida_letras(event);'>
 
                <div id='resp_razon_socialCli'></div>
                </div> 

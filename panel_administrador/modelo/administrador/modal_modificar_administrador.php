@@ -31,13 +31,13 @@ error_reporting(0);
         echo '
 
 
-        <div class="form-check mb-4">
+        <div class="form-check mb-4"><label>Contraseña</label>
           <input type="password" placeholder="Contraseña" id="passAdminMod" class="form-control" required="required" >
         </div>
-        <div class="form-check mb-4">
+        <div class="form-check mb-4"><label>Cargo</label>
           <input type="text" value="'.$_POST['cargo'].'" placeholder="Cargo" id="cargoAdminMod" class="form-control" required="required" >
         </div>
-        <div class="form-check mb-4">
+        <div class="form-check mb-4"><label>Alias</label>
           <input type="text" value="'.$_POST['alias'].'" placeholder="Alias" id="aliasAdminMod" class="form-control" required="required" >
         </div>
 

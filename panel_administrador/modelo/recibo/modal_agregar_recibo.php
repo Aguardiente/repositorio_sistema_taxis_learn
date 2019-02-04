@@ -145,16 +145,16 @@ error_reporting(0);
               </select>
                <div id='resp_servicio'></div>
 
-               <label style='font-family:"Cooper Black"'>Pago:</label></br>
-               <input type='number' id='pago' class='form-control' placeholder='(*)Escriba su pago' onkeyup="validador_campo('pago','resp_pago',2)" maxlength='10' min='0'  onkeypress='return valida_numeros(event);'>
-
-               <div id='resp_pago' ></div>
-  
                <label style='font-family:"Cooper Black"'>Total:</label></br>
                <input type='number' id='total' class='form-control' placeholder='(*)Escriba su total' onkeyup="validador_campo('total','resp_total',2)" maxlength='10' min='0'  onkeypress='return valida_numeros(event);'>
 
                <div id='resp_total' ></div>
 
+               <label style='font-family:"Cooper Black"'>Pago:</label></br>
+               <input type='number' id='pago' class='form-control' placeholder='(*)Escriba su pago' onkeyup="validador_campo('pago','resp_pago',2)" maxlength='10' min='0'  onkeypress='return valida_numeros(event);'>
+
+               <div id='resp_pago' ></div>
+  
                 <label style='font-family:"Cooper Black"'>Saldo:</label></br>
                <input type='number' id='saldo' class='form-control' placeholder='(*)Escriba su saldo' onkeyup="validador_campo('saldo','resp_saldo',2)" maxlength='10' min='0'  onkeypress='return valida_numeros(event);'>
 
