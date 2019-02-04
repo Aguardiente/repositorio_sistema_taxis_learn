@@ -11,55 +11,56 @@ error_reporting(0);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <script src="libs\scripts/jquery-1.12.4.js"></script>
-    
-    <link rel="stylesheet" href="libs\scripts/jquery-ui.css">
-
-   <script src="libs\scripts/jquery-ui.js"></script>
-
-   <script src="libs/jquery.js" charset="utf-8"></script>
-    <script type="text/javascript">
-            var $tablas = jQuery.noConflict();
-    </script>
-
-
     <title>Panel Principal</title>
     <link rel="shortcut icon" href="../images/favicon.png">
+  
+    <!-- jQuery -->
+    <script src="../librerias/jQuery/jquery.js" charset="utf-8"></script>
+    <script type="text/javascript"> var $tablas = jQuery.noConflict(); </script>
+
     <!-- Bootstrap Core CSS -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../librerias/Bootstrap/bootstrap.min.css" rel="stylesheet">
 
-    <!-- MetisMenu CSS -->
-    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../librerias/Bootstrap/bootstrap.min.js"></script>
 
-    <!-- Custom CSS -->
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-    <link href="social-buttons/social-buttons.css" rel="stylesheet">
-        <link href="social-buttons/estiloedwin.css" rel="stylesheet">
-    <!-- Morris Charts CSS -->
-    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+    <!-- Datepicker -->
+  	<script src="../librerias/Datepicker/js/bootstrap-datepicker.min.js" charset="utf-8"></script>
+  	<link rel="stylesheet" href="../librerias/Datepicker/css/bootstrap-datepicker.css" charset="utf-8">
+  	<script src="../librerias/Datepicker/locales/bootstrap-datepicker.es.min.js" charset="utf-8"></script>
+    <script type="text/javascript"> var $calendario = jQuery.noConflict(); </script>
 
-    <!-- Custom Fonts -->
-    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- DataTables JavaScript  -->
+    <script src="../librerias/Datatables/bootstrap/js/jquery.dataTables.min.js"></script>
+    <script src="../librerias/Datatables/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../librerias/Datatables/datatables-responsive/dataTables.responsive.js"></script>
+    <script src="../librerias/Datatables/datatables-buttons/dataTables.buttons.min.js"></script>
+    <script src="../librerias/Datatables/datatables-buttons/buttons.flash.min.js"></script>
+    <script src="../librerias/Datatables/datatables-buttons/jszip.min.js"></script>
+    <script src="../librerias/Datatables/datatables-buttons/pdfmake.min.js"></script>
+    <script src="../librerias/Datatables/datatables-buttons/vfs_fonts.js"></script>
+    <script src="../librerias/Datatables/datatables-buttons/buttons.html5.min.js"></script>
+    <script src="../librerias/Datatables/datatables-buttons/buttons.print.min.js"></script>
+  
+    <!-- jQuery min -->
+    <script src="../librerias/jQuery/jquery.min.js"></script>
+        
+    <!-- Carrusel OWL JavaScript  -->
+    <link rel="stylesheet" href="../librerias/Carrusel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../librerias/Carrusel/assets/animate.css">
+    <script src="../librerias/Carrusel/owl.carousel.min.js"></script>
 
-	<script src="libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js" charset="utf-8"></script>
-	<link rel="stylesheet" href="libs/bootstrap-datepicker/css/bootstrap-datepicker.css" charset="utf-8">
-	<script src="libs/bootstrap-datepicker/locales/bootstrap-datepicker.es.min.js" charset="utf-8"></script>
-      <script type="text/javascript">
-            var $calendario = jQuery.noConflict();
-    </script>
-
-  <link rel="stylesheet" href="../dist/css/fuentes.css" type="text/css" />
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>-->
-<script src="../control/controlador_menu.js"></script>
-<script type='text/javascript' src='../control/controlador_administrador.js'></script>
-<script type='text/javascript' src='../control/controladores_cliente.js'></script>
-<script type='text/javascript' src='../control/controladores_empresa.js'></script>
-<script type='text/javascript' src='../control/controladores_recibo.js'></script>
-<script type='text/javascript' src='../control/controladores_servicio.js'></script>
-<script type='text/javascript' src='../control/controladores_reporte.js'></script>
-<script type='text/javascript' src='../control/controladores_chofer.js'></script>
-<script type='text/javascript' src='../control/controladores_taxi.js'></script>
-<script type='text/javascript' src='../control/controladores_tipo.js'></script>
+    <!-- Controladores -->
+    <script type='text/javascript' src="../control/controlador_menu.js"></script>
+    <script type='text/javascript' src='../control/controlador_administrador.js'></script>
+    <script type='text/javascript' src='../control/controladores_cliente.js'></script>
+    <script type='text/javascript' src='../control/controladores_empresa.js'></script>
+    <script type='text/javascript' src='../control/controladores_recibo.js'></script>
+    <script type='text/javascript' src='../control/controladores_servicio.js'></script>
+    <script type='text/javascript' src='../control/controladores_reporte.js'></script>
+    <script type='text/javascript' src='../control/controladores_chofer.js'></script>
+    <script type='text/javascript' src='../control/controladores_taxi.js'></script>
+    <script type='text/javascript' src='../control/controladores_tipo.js'></script>
 
 </head>
 
@@ -203,74 +204,15 @@ error_reporting(0);
   		<?php
         include("../modelo/modelo_home_administrador.php");
   		?>
-    </div>
-
-
-   
-
+    </div> 
 
    <footer>
-
                 <div align='center'>
 
                     Solidev &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados <i class="fa fa-heart-o" aria-hidden="true"></i><i class="fa fa-heart-o" aria-hidden="true"></i><i class="fa fa-heart-o" aria-hidden="true"></i>.
 
                 </div>
-
     </footer>
-
-    <style>
-    .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #333;
-    background-color: #42c1ff;
-    }
-    </style>
-    <script>
-    $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
-    });
-    $('a.nosalto').click(function(e)
-    {
-    e.preventDefault();
-    });
-    </script>
-
-    <!-- jQuery -->
-    <!--<script src="../vendor/jquery/jquery.min.js"></script>-->
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
-
-    <!-- Morris Charts JavaScript -->
-    <script src="../vendor/raphael/raphael.min.js"></script>
-    <script src="../vendor/morrisjs/morris.min.js"></script>
-    <script src="../data/morris-data.js"></script>
-
-    <!-- DataTables JavaScript  -->
-    <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
-    <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
-    <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
-
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> -->
-    <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.flash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/sb-admin-2.js"></script>
-    
-    <script src="../libreria/jquery.min.js"></script>
-    <link rel="stylesheet" href="../owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="../owlcarousel/assets/animate.css">
-    <script src="../owlcarousel/owl.carousel.min.js"></script>
 
 </body>
 

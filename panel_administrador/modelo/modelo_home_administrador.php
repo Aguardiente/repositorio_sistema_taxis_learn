@@ -14,34 +14,32 @@ session_start();
 	          <div class="text-center">
 	        	  <a href="#">
 	        	  	<img src="../images/taxiDriver.jpg" class="img-responsive" alt="Image">	
-	        	  <p>D. Juan Carlos Cobaico</p>
-	        	  <p>Neurologo</p>
+	        	  <p>Sistema de taxi modelo 1</p>
 	        	  </a>
 	          </div>
 	          <div class="text-center">
 	        	  <a href="#">
 	        	  	<img src="../images/taxiDriver.jpg" alt="Image">	
-	        	  <p>D. Juan Carlos Cobaico</p>
-	        	  <p>Neurologo</p>
+	        	  <p>Sistema de taxi modelo 2</p>
 	        	  </a>
 	          </div>
 	          <div class="text-center">
 	        	  <a href="#">
 	        	  	<img src="../images/tazmania.png" class="img-responsive" alt="Image">	
-	        	  <p>D. Juan Carlos Cobaico</p>
-	        	  <p>Neurologo</p>
+	        	  <p>Sistema de taxi modelo 3</p>
 	        	  </a>
 	          </div>
 	        </div>
 	        <script>
 	            $(document).ready(function(){
-	            var owl = $('.owl-carousel');
-	            owl.owlCarousel({
-	                items:3,
-	                loop:true,
-	                margin:10,
-	                autoplay:true,
-	                autoplayTimeout:3000
-	            });
+		            var owl = $('.owl-carousel');
+		            owl.owlCarousel({
+		                items:3,
+		                loop:true,
+		                margin:10,
+		                autoplay:true,
+		                autoplayTimeout:3000
+		            });
+		            //$owl.is(':visible');
 	            });
 	        </script>
