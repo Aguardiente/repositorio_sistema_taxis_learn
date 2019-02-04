@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-02-2019 a las 18:19:20
+-- Tiempo de generación: 04-02-2019 a las 11:17:15
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 5.6.39
 
@@ -45,8 +45,9 @@ CREATE TABLE `chofer` (
 --
 
 INSERT INTO `chofer` (`ID_chofer`, `nombre`, `apellido`, `tipo_taxi`, `direccion`, `celular`, `telefono`, `fecha`, `hora`) VALUES
-(5, 'alfredo epinafio', 'colque lora', 3, 'las palmas 3', 77554812, 4453210, '02/02/19', '1:57pm'),
-(6, 'Fraile', 'Lujan Coia', 2, 'Av. Siempre viva', 6658411, 488080, '02/02/19', '8:58am');
+(7, 'Gualberto Pedro', 'Guzmán Heredia', 4, 'Calle Las Cuadras Nro. 700', 6936990, 4252517, '19/02/04', '11:12am'),
+(8, 'Reynaldo Hipolito', 'Hinojosa Marquez', 5, 'Barrio El Jazmin s/n', 6088932, 4552281, '19/02/04', '11:12am'),
+(9, 'Remberto Fernando', 'Soria Guaman', 5, 'Av. La Plata y calle Vaiven s/n', 7559866, 432655, '19/02/04', '11:12am');
 
 -- --------------------------------------------------------
 
@@ -72,9 +73,10 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`ID_cliente`, `nit_ci`, `nombre`, `apellido`, `razon_social`, `direccion`, `celular`, `telefono`, `fecha`, `hora`) VALUES
-(4, 222222, 'Juan', 'Soliz Rivera', 'Burguer Srl.', 'av. Padro', 774512121, 4555521, '01/02/19', '9:53am'),
-(5, 23432432, 'Eustacio', 'Maron Lauca', 'M Ltda.', 'Av. Las Maravillas', 7334324, 455676, '01/02/19', '9:51am'),
-(6, 213213432, 'Ramiro Gabriel', 'Borgues Guzman', 'Causas Inc', 'Av. Militar', 7645635, 463636, '02/02/19', '9:52am');
+(8, 7888588, 'Luis Marco', 'Butrón', 'C&M Editores', 'Calle Las Palmeras s/n', 7185999, 4552114, '19/01/25', '4:20am'),
+(9, 7889591, 'Esteban Marcelo', 'Laredo Soria', 'La Pluma & Asociados', 'Av. Principal calle Velasco Edif. Miranda piso 6 of. 4', 78095412, 4356257, '19/01/27', '4:37am'),
+(10, 7555410, 'Lusmila Gabriela', 'Danes Paila', 'Fotocopiadora \"Fassil\"', 'Av. Rumaypampa calle Albargatas s/n', 75889414, 432221, '19/01/30', '4:39am'),
+(11, 6523217, 'Sinforoso', 'Melendres Pinto', '\"La Gata\" Producciones Audiovisuales', 'Calle \"Los Pardos\" entre \"Barrio Lujuana\" #445', 6989541, 458851, '19/01/30', '4:41am');
 
 -- --------------------------------------------------------
 
@@ -98,9 +100,7 @@ CREATE TABLE `empresa` (
 --
 
 INSERT INTO `empresa` (`ID_empresa`, `razon_social`, `encargado`, `nit`, `num_autorizacion`, `fecha_limite`, `fecha`, `hora`) VALUES
-(1, 'EL Ltda.', 'lucio', 2132321, 21321321, '20/01/19', '24/01/19', '6:36pm'),
-(2, 'devesa', 'miguel', 21321111, 11111, '01/02/19', '01/02/19', '12:12pm'),
-(3, 'Susañeo srl.', 'pedro', 4445454, 657657, '02/02/19', '01/02/19', '12:15pm');
+(1, 'Radiotaxis La Canija', 'Armado Cordova Alanez', 100058984, 2147483647, '18/12/21', '19/02/04', '4:22am');
 
 -- --------------------------------------------------------
 
@@ -128,15 +128,9 @@ CREATE TABLE `factura` (
 --
 
 INSERT INTO `factura` (`ID_Factura`, `servicio`, `chofer`, `cliente`, `descripcion`, `tipo`, `total`, `pago`, `saldo`, `nit_cliente`, `fecha_emision`, `hora`) VALUES
-(1, '14', 5, 4, 'esta factura se hizo por motivos personales hhh', 3, 120, 800, 40, 445812221, '02/02/19', '6:25am'),
-(6, 'carrera', 5, 4, 'fdgfdg', 1, 321, 213, 11, 223232, '02/02/19', '1:26am'),
-(7, 'transporte', 5, 4, 'desesperada', 1, 221, 112, 333, 2147483647, '02/02/19', '1:29am'),
-(8, 'carrera', 5, 4, 'sdadsa', 1, 32, 123, 333, 14543212, '02/02/19', '1:30am'),
-(9, 'carrera', 5, 4, 'sdadsa', 1, 32, 123, 333, 14543212, '02/02/19', '1:30am'),
-(10, 'transporte', 5, 4, 'mañuda', 2, 2000, 2525, 1515, 888888, '02/02/19', '6:48am'),
-(11, 'carrera', 5, 4, 'sadsad', 1, 444, 3333, 55, 232132, '02/02/19', '1:39am'),
-(12, 'carrera', 5, 4, 'sasda', 1, 321, 123, 23, 433434, '02/02/19', '1:41am'),
-(13, 'transporte', 5, 4, 'sasdaAJA', 1, 321, 23, 123, 433434, '02/02/19', '6:46am');
+(1, 'carrera', 7, 8, 'El cliente no quiso nit por alguna razon que dios sabra porque...', 4, 50, 50, 0, 0, '19/02/04', '11:10am'),
+(2, 'transporte', 9, 10, 'Se quedo debiendo ese saldo de diez, dios sabe cuando pagara la doña..', 5, 100, 90, 10, 7555410, '19/02/04', '11:08am'),
+(3, 'transporte', 9, 11, 'Un taxi de servicio realizo el transporte, algo no adecuado para el tipo de taxi, pero por urgencia se hizo, quedo un saldo de 5 Bs.', 4, 40, 35, 5, 6523217, '19/02/04', '11:08am');
 
 -- --------------------------------------------------------
 
@@ -153,13 +147,6 @@ CREATE TABLE `reporte` (
   `fecha_fin` varchar(50) DEFAULT NULL,
   `hora` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `reporte`
---
-
-INSERT INTO `reporte` (`ID_reporte`, `cliente`, `celular`, `telefono`, `fecha_inicio`, `fecha_fin`, `hora`) VALUES
-(1, 'eustacio', 123213, 4444545, '2019-12-12', '2019-02-23', '7:31pm');
 
 -- --------------------------------------------------------
 
@@ -186,11 +173,11 @@ CREATE TABLE `servicio` (
 --
 
 INSERT INTO `servicio` (`ID_servicio`, `servicio`, `chofer`, `cliente`, `descripcion`, `tipo`, `total`, `pago`, `saldo`, `fecha`, `hora`) VALUES
-(14, 'transporte', 5, 4, 'aqui hay oro', 1, 150, 120, 30, '11/02/2018', '10:20am'),
-(15, 'transporte', 5, 4, 'pachanga                            ', 2, 10, 20, 30, '02/02/19', '7:53am'),
-(18, 'transporte', 6, 5, 'Transporte de carga de frutas              ', 2, 123, 321, 111, '02/02/19', '2:54pm'),
-(19, 'carrera', 5, 6, 'Carrera simple de lugar X a lugar Y              ', 1, 400, 100, 300, '02/02/19', '2:56pm'),
-(20, 'carrera', 6, 6, 'Carga de instrumentos musicales', 2, 700, 400, 300, '02/02/19', '2:57pm');
+(1, 'carrera', 7, 8, 'El Cliente llego 6 min tarde antes de lo establecido', 4, 50, 50, 0, '01/02/19', '9:42am'),
+(2, 'transporte', 9, 10, 'Se transportó 5 cargas de lana de oveja del campo...  ', 5, 100, 90, 10, '19/02/04', '11:11am'),
+(3, 'transporte', 9, 11, 'Se realizo el transporte de frutas en un yute. Eran papayas...                     ', 4, 40, 35, 5, '19/02/04', '11:11am'),
+(4, 'carrera', 8, 10, 'Se llevo a la doña desde el condominio \"Las Bellucias\" hasta el condominio \"Las Torres\". No pidió recibo...', 4, 30, 30, 0, '19/02/04', '11:11am'),
+(5, 'carrera', 7, 9, 'El cliente Esteban pidió que lo llevaran desde, el hotel donde se encontraba, hotel \"Las Americas\" hasta la plazuela \"Caracas\", fue una carrera corta. Tampoco pidió recibo..', 4, 15, 15, 0, '19/02/04', '11:11am');
 
 -- --------------------------------------------------------
 
@@ -214,9 +201,9 @@ CREATE TABLE `taxi` (
 --
 
 INSERT INTO `taxi` (`ID_taxi`, `numero_movil`, `placa`, `modelo`, `marca`, `descripcion`, `fecha`, `hora`) VALUES
-(1, 12321321, 'sadsadsad', 'caldina', 'toyota', 'sadsadad', '24/01/19', '1:57pm'),
-(2, 213, 'asd', 'sadsadsa', 'dsadsa', 'sad', '01/02/19', '10:49pm'),
-(3, 2321, 'AER-112', 'WB', 'Toyota', 'El material de este auto es el cromo', '02/02/19', '2:00pm');
+(1, 78956125, 'AHY-784', 'Ipsum', 'Toyota', 'La vida es tan solo jugar y jugar, la vida es tan solo... PACMAN!', '19/02/04', '11:14am'),
+(2, 7995412, 'ERG-455', 'Caldina', 'Nissan', 'Without A Face', '19/02/04', '11:13am'),
+(3, 70555522, 'UUH-759', 'Cores', 'WMB', 'Eyes no face', '19/02/04', '11:13am');
 
 -- --------------------------------------------------------
 
@@ -236,9 +223,8 @@ CREATE TABLE `tipo` (
 --
 
 INSERT INTO `tipo` (`ID_tipo`, `tipo_taxi`, `fecha`, `hora`) VALUES
-(1, 'servicio', '24/01/19', '6:49pm'),
-(2, 'transporte', '26/01/19', '7:08pm'),
-(3, 'carga', '02/02/19', '2:12pm');
+(4, 'Servicio', '04/02/19', '11:15am'),
+(5, 'Transporte', '04/02/19', '11:14am');
 
 -- --------------------------------------------------------
 
@@ -259,7 +245,7 @@ CREATE TABLE `usuario_administrador` (
 --
 
 INSERT INTO `usuario_administrador` (`ID_usuario_administrador`, `email`, `password`, `cargo`, `alias`) VALUES
-(1, 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'tooreentezXXXXXXT', 'mazamorra');
+(1, 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'ADMINISTRADOR PRINCIPAL', 'DonGato');
 
 --
 -- Índices para tablas volcadas
@@ -341,31 +327,31 @@ ALTER TABLE `chofer`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `ID_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `empresa`
 --
 ALTER TABLE `empresa`
-  MODIFY `ID_empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID_empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `factura`
 --
 ALTER TABLE `factura`
-  MODIFY `ID_Factura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `ID_Factura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `reporte`
 --
 ALTER TABLE `reporte`
-  MODIFY `ID_reporte` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID_reporte` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `servicio`
 --
 ALTER TABLE `servicio`
-  MODIFY `ID_servicio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `ID_servicio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `taxi`
@@ -377,7 +363,7 @@ ALTER TABLE `taxi`
 -- AUTO_INCREMENT de la tabla `tipo`
 --
 ALTER TABLE `tipo`
-  MODIFY `ID_tipo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID_tipo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario_administrador`
