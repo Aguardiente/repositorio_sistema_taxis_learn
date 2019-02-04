@@ -17,7 +17,7 @@ if(!isset($_SESSION["id_administrador"])){
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Panel Principal</title>
-    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="shortcut icon" href="../images/favicon.ico">
   
     <!-- jQuery -->
     <script src="../librerias/jQuery/jquery.js" charset="utf-8"></script>
@@ -99,7 +99,7 @@ if(!isset($_SESSION["id_administrador"])){
                 </a>
               </li>              
               <li>
-                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Administradores" onclick="verClientes()">
+                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Clientes" onclick="verClientes()">
                   <div class="text-center">
                     <div class="menu-item">
                       <p>Cliente</p>
@@ -108,7 +108,7 @@ if(!isset($_SESSION["id_administrador"])){
                 </a>
               </li>
               <li>
-                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Proveedores" onclick="verEmpresas()">
+                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Empresa" onclick="verEmpresas()">
                   <div class="text-center">
                     <div class="menu-item">
                       <p>Empresa</p>
@@ -117,7 +117,7 @@ if(!isset($_SESSION["id_administrador"])){
                 </a>
               </li>
               <li>
-                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Inventario" onclick="verRecibos()">
+                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Recibos" onclick="verRecibos()">
                   <div class="text-center">
                     <div class="menu-item">
                       <p>Recibo</p>
@@ -126,7 +126,7 @@ if(!isset($_SESSION["id_administrador"])){
                 </a>
               </li>              
               <li>
-                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Clientes" onclick="verServicios()">
+                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Servicios" onclick="verServicios()">
                   <div class="text-center">
                     <div class="menu-item">
                       <p>Servicio</p>
@@ -135,7 +135,7 @@ if(!isset($_SESSION["id_administrador"])){
                 </a>
               </li>
               <li>
-                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Clientes" onclick="verReportes()">
+                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Reportes" onclick="verReportes()">
                   <div class="text-center">
                     <div class="menu-item">
                       <p>Reporte</p>
@@ -144,7 +144,7 @@ if(!isset($_SESSION["id_administrador"])){
                 </a>
               </li>
               <li>
-                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Clientes" onclick="verChoferes()">
+                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Choferes" onclick="verChoferes()">
                   <div class="text-center">
                     <div class="menu-item">
                       <p>Chofer</p>
@@ -153,7 +153,7 @@ if(!isset($_SESSION["id_administrador"])){
                 </a>
               </li>
               <li>
-                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Clientes" onclick="verTaxis()">
+                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Taxis" onclick="verTaxis()">
                   <div class="text-center">
                     <div class="menu-item">
                       <p>Taxi</p>
@@ -162,7 +162,7 @@ if(!isset($_SESSION["id_administrador"])){
                 </a>
               </li>                                          
               <li>
-                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Clientes" onclick="verTipos()">
+                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Listar Tipos" onclick="verTipos()">
                   <div class="text-center">
                     <div class="menu-item">
                       <p>Tipo</p>

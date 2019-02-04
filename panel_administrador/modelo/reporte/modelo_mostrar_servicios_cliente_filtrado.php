@@ -58,7 +58,11 @@
             responsive: true,
             dom: 'Bfrtip',
 	        buttons: [
-	            'copy', 'csv', 'excel', 'pdf', 'print'
+		        { "extend": 'copy', "text":'Copiar',"className": 'btn btn-warning btn-sm' },
+				{ "extend": 'csv', "text":'CSV',"className": 'btn btn-warning btn-sm' },		
+				{ "extend": 'excel', "text":'Excel',"className": 'btn btn-warning btn-sm' },
+				{ "extend": 'pdf', "text":'PDF',"className": 'btn btn-warning btn-sm' },
+				{ "extend": 'print', "text":'Imprimir',"className": 'btn btn-warning btn-sm' }
 	        ]
         });
     });
