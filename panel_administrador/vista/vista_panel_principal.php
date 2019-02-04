@@ -67,8 +67,8 @@ error_reporting(0);
 <body style='background:black;'>
 
     <!-- Begin Navbar -->
-    <nav class="menu-bar">
-      <div class="navbar navbar-default">
+    <nav class="menu-bar" >
+      <div class="navbar navbar-default" style='background:yellow;'>
         <div class="container">
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">

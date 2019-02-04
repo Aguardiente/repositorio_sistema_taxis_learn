@@ -6,12 +6,11 @@ session_start();
 <link rel="stylesheet" href="libs/font-awesome.min.css"/>
 <link rel="stylesheet" href="libs/bootstrap.min.css">
 <link rel="stylesheet" href="libs/main.css">
-<link rel="stylesheet" type="text/css" href="libs/common.css">
 <script type="text/javascript" charset="utf8" src="libs/jquery-2.0.3.js"></script>
 <script src="libs/bootstrap.min.js"></script>
 <script type="text/javascript" src="libs/jquery.validate.min.js"></script>
 <script type="text/javascript" src="libs/common.js"></script>
-<body style='background:black;'>
+<body style='background:black'>
 
     
     <header class="header bg">
@@ -38,7 +37,9 @@ session_start();
         <div class="jumbotron align-items-center">
             <div class="gradient"></div>
             <div class="container content">
-				  	<div class="col-sm-6 col-8 align-self-center text-center">
+				  	<div class="col-sm-3 col-3 align-self-center text-center">
+                    </div>
+                    <div class="col-sm-6 col-8 align-self-center text-center">
 		                <h1>Sistema de Radio Taxis</h1>
 		                <h2>Ingrese la cuenta:</h2>
                 	<div class="alert alert-danger" role="alert" id="error" style="display: none;">...
@@ -62,6 +63,15 @@ session_start();
 
         </div>
     </section>
+
+
+   <footer>
+                <div align='center'>
+
+                    Solidev &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados.
+
+                </div>
+    </footer>
 
 </body>
 </html>
