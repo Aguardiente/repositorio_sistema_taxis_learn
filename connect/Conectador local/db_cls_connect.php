@@ -5,7 +5,7 @@ Class dbObj{
 	var $servername = "localhost";
 	var $username = "root";
 	var $password = "";
-	var $dbname = "sistema_inventario_bd";
+	var $dbname = "bd_radio_taxis_fn1";
 	var $conn;
 	function getConnstring() {
 		$con = mysqli_connect($this->servername, $this->username, $this->password, $this->dbname) or die("Connection failed: " . mysqli_connect_error());
