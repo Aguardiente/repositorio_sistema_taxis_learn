@@ -9,7 +9,7 @@ session_start();
                       <p style='margin-bottom:3px;'> Listado de todos los administradores registrados hasta la ultima fecha : </p>
                     </div>
                 <div class='row'>
-                    <div class='col-lg-12 col-xs-12' style='color:yellow; '>
+                    <div class='col-lg-12 col-xs-12' >
 
 							<?php
 								$infoTablasAdmin="";

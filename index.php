@@ -1,6 +1,10 @@
 <?php
 session_start();
-?>
+if(isset($_SESSION["id_administrador"])){
+      echo "<meta http-equiv='refresh' content='0;url=panel_administrador/vista/vista_panel_principal.php'>";
+}else{
+  ?>
+
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="libs/font-awesome.min.css"/>
@@ -75,3 +79,7 @@ session_start();
 
 </body>
 </html>
+
+<?php
+}
+  ?>

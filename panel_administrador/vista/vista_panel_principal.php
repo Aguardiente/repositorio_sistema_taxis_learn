@@ -1,7 +1,12 @@
 <?php 
 session_start();
 error_reporting(0);
+if(!isset($_SESSION["id_administrador"])){
+      echo "<meta http-equiv='refresh' content='0;url=../../index.php'>";
+}else{
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +49,7 @@ error_reporting(0);
   
     <!-- jQuery min -->
     <script src="../librerias/jQuery/jquery.min.js"></script>
-        
+ 
     <!-- Carrusel OWL JavaScript  -->
     <link rel="stylesheet" href="../librerias/Carrusel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="../librerias/Carrusel/assets/animate.css">
@@ -73,9 +78,7 @@ error_reporting(0);
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li>
-                <img src="../../multimedia/imagenes/logo.png" >
-
-                </a>
+                <img src="../../multimedia/imagenes/logoMin.png" class="img-responsive" alt="Image">
               </li>
               <li>
                 <a href="#" data-toggle="tooltip" data-placement="bottom" title="Ir al inicio" onclick="verHome()">
@@ -168,7 +171,7 @@ error_reporting(0);
                 </a>
               </li>   
               <li>
-                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Sale de la sesion" onclick="salirSistema()">
+                <a href="../modelo/salir/salir.php" data-toggle="tooltip" data-placement="bottom" title="Sale de la sesion" >
                   <div class="text-center">
                     <div class="menu-item">
                       <p>Salir</p>
@@ -206,3 +209,7 @@ error_reporting(0);
 </body>
 
 </html>
+
+<?php
+}
+  ?>

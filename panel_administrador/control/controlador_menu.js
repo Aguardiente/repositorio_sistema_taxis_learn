@@ -151,6 +151,21 @@ function verTipos() {
 }
 
 //SALIDA DEL SISTEMA
+/*
 function salirSistema() {
-window.location="../../index.php";
+
+   $.ajax({
+      data: "",
+      url: '../modelo/salir/salir.php',
+      type: 'post',
+      beforeSend: function() {
+         //$("#panel").html("Procesando, espere por favor...");
+      },
+      success: function(response) {
+         //$("#panel").html(response);
+         //window.location="../../index.php";
+      }
+   });
+
 }
+*/
